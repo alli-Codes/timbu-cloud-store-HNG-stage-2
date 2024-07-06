@@ -2,13 +2,8 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 export default function Category() {
-  const handle = () => {
-    console.log(route.hash);
-  };
   const route = useLocation();
-  useEffect(() => {
-    console.log(route.hash, "from effect");
-  }, [route]);
+  useEffect(() => {}, [route]);
   return (
     <div className="flex flex-col gap-4">
       <section>
@@ -19,7 +14,6 @@ export default function Category() {
       <section className="flex justify-between items-center text-[#626262]">
         <a
           href="#bodycreams"
-          onClick={handle}
           className={`h-8 px-2 py-1.5 flex items-center rounded-lg text-white ${
             route.hash == "#bodycreams" || route.hash == ""
               ? "bg-[#C31162]"
@@ -30,7 +24,6 @@ export default function Category() {
         </a>
         <a
           href="#makeups"
-          onClick={handle}
           className={`h-8 px-2 py-1.5 flex items-center rounded-lg text-white ${
             route.hash == "#makeups" ? "bg-[#C31162]" : "bg-[#EFEFEF]"
           }`}
@@ -39,7 +32,6 @@ export default function Category() {
         </a>
         <a
           href="#perfumes"
-          onClick={handle}
           className={`h-8 px-2 py-1.5 flex items-center rounded-lg text-white ${
             route.hash == "#perfumes" ? "bg-[#C31162]" : "bg-[#EFEFEF]"
           }`}

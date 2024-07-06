@@ -7,15 +7,15 @@ import bodyCreams from "../products/bodyCreams.json";
 
 export default function Home() {
   const route = useLocation();
-  useEffect(() => {
-    console.log(route.hash, "from home");
-  }, [route]);
+  useEffect(() => {}, [route]);
   return (
-    <div className="flex flex-col gap-8 relative">
+    <div className="lg:self-center flex flex-col gap-8 relative">
       <Search />
       <Category />
       <CategoryView
-        isHidden={route.hash == "#bodycreams" ? "" : "hidden"}
+        isHidden={
+          route.hash == "#bodycreams" || route.hash == "" ? "" : "hidden"
+        }
         bodyCreams={bodyCreams}
       />
       <CategoryView
