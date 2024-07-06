@@ -1,0 +1,38 @@
+[
+    [
+        {
+            "productImage": "/product2.png",
+            "productName": "Fair & White",
+            "productPrice": "N10,000"
+        },
+        {
+            "productImage": "/product2.png",
+            "productName": "Fair & Glow",
+            "productPrice": "N10,000"
+        }
+    ],
+    [
+        {
+            "productImage": "/product2.png",
+            "productName": "Fair & Dark",
+            "productPrice": "N10,000"
+        },
+        {
+            "productImage": "/product2.png",
+            "productName": "Fair & Red",
+            "productPrice": "N10,000"
+        }
+    ],
+    [
+        {
+            "productImage": "/product2.png",
+            "productName": "Fair & Dark",
+            "productPrice": "N10,000"
+        },
+        {
+            "productImage": "/product2.png",
+            "productName": "Fair & Red",
+            "productPrice": "N10,000"
+        }
+    ]
+]
