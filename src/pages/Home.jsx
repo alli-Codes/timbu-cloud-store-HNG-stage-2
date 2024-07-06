@@ -6,8 +6,11 @@ import Search from "../components/Search";
 export default function Home() {
   return (
     <div className="flex flex-col gap-8 relative">
-      <Search />
-      <Category />
+      <div className="sticky top-0 z-10">
+        <Search />
+        <Category />
+      </div>
+      <ProductList />
       <ProductList />
       <ProductList />
       <Menu />

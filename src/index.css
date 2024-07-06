@@ -6,3 +6,7 @@
 body {
     font-family: 'Inter', sans-serif;
 }
+
+.product__list{
+    scrollbar-color: transparent transparent;
+}
