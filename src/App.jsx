@@ -11,6 +11,8 @@ import ProductInfo from "./pages/ProductInfo";
 import useAppState from "./state/createAppState";
 import { useState } from "react";
 import bodyCreams from "./products/bodyCreams.json";
+import Cart from "./pages/Cart";
+import CheckOut from "./pages/CheckOut";
 
 // const router = createBrowserRouter([
 //   {
@@ -34,8 +36,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="productinfo" element={<ProductInfo />} />
-            {/* <Route path="contact" element={<Contact />} /> */}
+            <Route path="/productinfo" element={<ProductInfo />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<CheckOut />} />
             {/* <Route path="*" element={<NoPage />} /> */}
           </Route>
         </Routes>

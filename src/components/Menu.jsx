@@ -9,7 +9,7 @@ export default function Menu() {
   return (
     <div
       className={`${
-        location.pathname == "/productinfo"
+        location.pathname !== "/"
           ? "hidden"
           : "bg-[#FAFAFA] w-full px-8 py-5 flex justify-between fixed left-0 bottom-0 lg:hidden"
       }`}
