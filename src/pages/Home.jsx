@@ -13,7 +13,7 @@ export default function Home() {
   const route = useLocation();
   useEffect(() => {}, [route]);
   return (
-    <div className="w-full lg:max-w-[50rem] lg:self-center flex flex-col gap-8 p-8 relative">
+    <div className="w-full lg:max-w-[50rem] lg:self-center flex flex-col gap-8 p-8 mb-10 relative">
       <Search />
       <Category />
       <CategoryView

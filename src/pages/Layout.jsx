@@ -4,7 +4,7 @@ import Menu from "../components/Menu";
 
 export default function Layout({ children }) {
   return (
-    <div className="bg-white flex flex-col gap-8 relative">
+    <div className="bg-white flex flex-col relative">
       <Header />
       {children}
       <Menu />
