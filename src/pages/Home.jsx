@@ -2,14 +2,18 @@ import { useLocation } from "react-router-dom";
 import Category from "../components/Category";
 import CategoryView from "../components/CategoryView";
 import Search from "../components/Search";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import bodyCreams from "../products/bodyCreams.json";
+import useAppState from "../state/createAppState";
 
 export default function Home() {
+  const context = useAppState();
+  const [products, productId] = useContext(context.UserContext);
+  // console.log(productId);
   const route = useLocation();
   useEffect(() => {}, [route]);
   return (
-    <div className="lg:self-center flex flex-col gap-8 relative">
+    <div className="w-full lg:max-w-[50rem] lg:self-center flex flex-col gap-8 p-8 relative">
       <Search />
       <Category />
       <CategoryView

@@ -1,46 +1,50 @@
 [
-    [
-        {
-            "productImage": "/product2.png",
-            "productName": "Fair & White",
-            "productPrice": "N10,000"
-        },
-        {
-            "productImage": "/product2.png",
-            "productName": "Fair & Glow",
-            "productPrice": "N10,000"
-        },
-        {
-            "productImage": "/product2.png",
-            "productName": "Fair & Red",
-            "productPrice": "N10,000"
-        },
-        {
-            "productImage": "/product2.png",
-            "productName": "Fair & Red",
-            "productPrice": "N10,000"
-        }
-    ],
-    [
-        {
-            "productImage": "/product2.png",
-            "productName": "Fair & Dark",
-            "productPrice": "N10,000"
-        },
-        {
-            "productImage": "/product2.png",
-            "productName": "Fair & Red",
-            "productPrice": "N10,000"
-        },
-        {
-            "productImage": "/product2.png",
-            "productName": "Fair & Red",
-            "productPrice": "N10,000"
-        },
-        {
-            "productImage": "/product2.png",
-            "productName": "Fair & Red",
-            "productPrice": "N10,000"
-        }
-    ]
+    {
+        "id": 0,
+        "productImage": "/product2.png",
+        "productName": "Fair & White",
+        "productPrice": "N10,000"
+    },
+    {
+        "id": 1,
+        "productImage": "/product2.png",
+        "productName": "Fair & Glow",
+        "productPrice": "N10,000"
+    },
+    {
+        "id": 2,
+        "productImage": "/product2.png",
+        "productName": "Fair & Red",
+        "productPrice": "N10,000"
+    },
+    {
+        "id": 3,
+        "productImage": "/product2.png",
+        "productName": "Fair & Red",
+        "productPrice": "N10,000"
+    },
+    {
+        "id": 4,
+        "productImage": "/product2.png",
+        "productName": "Fair & Dark",
+        "productPrice": "N10,000"
+    },
+    {
+        "id": 5,
+        "productImage": "/product2.png",
+        "productName": "Fair & Red",
+        "productPrice": "N10,000"
+    },
+    {
+        "id": 6,
+        "productImage": "/product2.png",
+        "productName": "Fair & Red",
+        "productPrice": "N10,000"
+    },
+    {
+        "id": 7,
+        "productImage": "/product2.png",
+        "productName": "Fair & Red",
+        "productPrice": "N10,000"
+    }
 ]

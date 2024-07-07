@@ -1,10 +1,16 @@
 /* eslint-disable react/prop-types */
 import HeartIcon from "../icons/heart-icon";
 
-export default function Product({ product }) {
+export default function Product({ product, index }) {
+  const route = window.location;
+  const handleRouting = function () {
+    localStorage.setItem("productId", index);
+    route.pathname = "/productinfo";
+  };
   return (
-    <div className="flex flex-col gap-2">
-      <section className="bg-[#FAFAFA] h-36 w-36 p-4 rounded-lg relative">
+    // <a href="/productinfo">
+    <div className="flex flex-col gap-2" onClick={handleRouting}>
+      <section className="bg-[#FAFAFA] h-full w-full p-4 rounded-lg relative">
         <div className="absolute right-0 -translate-x-2">
           <HeartIcon />
         </div>
@@ -15,5 +21,6 @@ export default function Product({ product }) {
         <p className="text-[#626262] text-sm">{product.productPrice}</p>
       </section>
     </div>
+    // </a>
   );
 }

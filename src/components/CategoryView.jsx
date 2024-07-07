@@ -4,9 +4,9 @@ import ProductList from "./ProductList";
 export default function CategoryView({ isHidden, bodyCreams }) {
   return (
     <div className={isHidden}>
-      {bodyCreams.map((product, index) => (
-        <ProductList product={product} key={index} />
-      ))}
+      {/* {bodyCreams.map((product, index) => ( */}
+      <ProductList />
+      {/* ))} */}
     </div>
   );
 }

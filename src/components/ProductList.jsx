@@ -1,12 +1,20 @@
 /* eslint-disable react/prop-types */
 import Product from "./Product";
+import useAppState from "../state/createAppState";
+import { useContext } from "react";
 
-export default function ProductList({ product }) {
-  //   console.log(product, "hey");
+export default function ProductList() {
+  const context = useAppState();
+  const [products] = useContext(context.UserContext);
   return (
-    <div className="flex gap-4 overflow-x-scroll product__list">
-      {product.map((product, index) => (
-        <Product product={product} key={index} />
+    <div className="w-full grid grid-cols-[repeat(auto-fit,_minmax(10rem,_1fr))] gap-4 product__lis">
+      {products.map((product, index, products) => (
+        <Product
+          product={product}
+          index={index}
+          products={products}
+          key={index}
+        />
       ))}
     </div>
   );
