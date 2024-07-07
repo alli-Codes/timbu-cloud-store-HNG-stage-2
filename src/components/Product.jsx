@@ -6,7 +6,6 @@ export default function Product({ product, index }) {
   const route = window.location;
   const handleRouting = function () {
     localStorage.setItem("productId", index);
-    route.pathname = "/productinfo";
   };
   return (
     // <a href="/productinfo">
