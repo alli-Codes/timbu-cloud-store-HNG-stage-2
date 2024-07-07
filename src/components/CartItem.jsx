@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
+import AddIcon from "../icons/add-icon";
 import CloseIcon from "../icons/close-icon";
+import MinusIcon from "../icons/minus-icon";
 
-export default function CartItem({ product }) {
+export default function CartItem({ product, index, handleDeletion }) {
   const { productName, productImage, productPrice, itemCounter } = product;
   return (
     <div className="p-2 flex items-center gap-2 shadow rounded-xl relative">
@@ -17,13 +19,20 @@ export default function CartItem({ product }) {
         </div>
         <div className="flex items-center justify-between">
           <p className="text-sm font-semibold">{productPrice}</p>
-          <div className="px-4 py-1 flex items-center gap-6 border border-[#C31162] text-xl font-semibold rounded-xl">
-            <button onClick>-</button>
+          <div className="px-4 py-1 flex items-center gap-2 border border-[#C31162] text-xl font-semibold rounded-xl">
+            <button>
+              <MinusIcon />
+            </button>
             <p className="text-lg">{itemCounter ?? 1}</p>
-            <button onClick>+</button>
+            <button>
+              <AddIcon />
+            </button>
           </div>
         </div>
-        <div className="absolute top-0 right-0">
+        <div
+          onClick={() => handleDeletion(index)}
+          className="absolute top-0 right-0"
+        >
           <CloseIcon />
         </div>
       </section>

@@ -14,17 +14,6 @@ import bodyCreams from "./products/bodyCreams.json";
 import Cart from "./pages/Cart";
 import CheckOut from "./pages/CheckOut";
 
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <Home />,
-//   },
-//   {
-//     path: "/productinfo",
-//     element: <ProductInfo />,
-//   },
-// ]);
-
 export default function App() {
   const context = useAppState();
   const { UserContext } = context;

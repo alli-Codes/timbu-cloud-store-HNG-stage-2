@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import Product from "../components/Product";
 import useAppState from "../state/createAppState";
+import AddIcon from "../icons/add-icon";
+import MinusIcon from "../icons/minus-icon";
 
 export default function ProductInfo() {
   const [itemCounter, setItemCounter] = useState(1);
@@ -46,10 +48,14 @@ export default function ProductInfo() {
           </p>
         </div>
         <div className="flex justify-between">
-          <div className="px-4 py-2 flex items-center gap-6 border border-[#C31162] text-xl font-semibold rounded-xl">
-            <button onClick={decrementItems}>-</button>
+          <div className="px-4 py-2 flex items-center gap-4 border border-[#C31162] text-xl font-semibold rounded-xl">
+            <button onClick={decrementItems}>
+              <MinusIcon />
+            </button>
             <p className="text-lg">{itemCounter}</p>
-            <button onClick={incrementItems}>+</button>
+            <button onClick={incrementItems}>
+              <AddIcon />
+            </button>
           </div>
           <p className="font-semibold">{productPrice}</p>
         </div>

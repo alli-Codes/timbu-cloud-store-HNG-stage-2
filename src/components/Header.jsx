@@ -28,7 +28,11 @@ export default function Header() {
         </Link>
       )}
       {handlePageTitle()}
-      {location.pathname == "/cart" ? "" : <CartIcon />}
+      {location.pathname == "/" || location.pathname == "/productinfo" ? (
+        <Link to="/cart">
+          <CartIcon />
+        </Link>
+      ) : undefined}
     </div>
   );
 }

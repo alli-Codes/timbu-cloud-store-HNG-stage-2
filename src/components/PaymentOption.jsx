@@ -12,7 +12,7 @@ export default function PaymentOption({ title, children }) {
         </div>
       </section>
       {isVisible ? (
-        <section className=" flex flex-col gap-2 py-4 border-t border-black">
+        <section className=" flex flex-col gap-2 py-4 border-t border-[#A6A6A6]">
           {children}
         </section>
       ) : (

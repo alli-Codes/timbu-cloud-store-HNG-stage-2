@@ -28,6 +28,10 @@ export default function CheckOut() {
         <AddNewHolder title="Add New Card" />
       </PaymentOption>
       <AddNewHolder title="Add New Method" />
+
+      <button className="w-full bg-[#C31162] p-4 text-white text-lg font-semibold rounded-xl">
+        Check Out
+      </button>
     </div>
   );
 }
