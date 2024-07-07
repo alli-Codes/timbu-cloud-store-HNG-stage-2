@@ -12,16 +12,16 @@ import useAppState from "./state/createAppState";
 import { useState } from "react";
 import bodyCreams from "./products/bodyCreams.json";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/productinfo",
-    element: <ProductInfo />,
-  },
-]);
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <Home />,
+//   },
+//   {
+//     path: "/productinfo",
+//     element: <ProductInfo />,
+//   },
+// ]);
 
 export default function App() {
   const context = useAppState();
@@ -30,19 +30,19 @@ export default function App() {
   const [productId, setProductId] = useState(0);
   return (
     <UserContext.Provider value={[products, productId, setProductId]}>
-      {/* <BrowserRouter> */}
-      {/* <Routes> */}
-      {/* <Route path="/" element={<Layout />}> */}
-      {/* <Route index element={<Home />} /> */}
-      {/* <Route path="productinfo" element={<ProductInfo />} /> */}
-      {/* <Route path="contact" element={<Contact />} /> */}
-      {/* <Route path="*" element={<NoPage />} /> */}
-      {/* </Route> */}
-      {/* </Routes> */}
-      {/* </BrowserRouter> */}
-      <Layout>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="productinfo" element={<ProductInfo />} />
+            {/* <Route path="contact" element={<Contact />} /> */}
+            {/* <Route path="*" element={<NoPage />} /> */}
+          </Route>
+        </Routes>
+      </BrowserRouter>
+      {/* <Layout>
         <RouterProvider router={router} />
-      </Layout>
+      </Layout> */}
     </UserContext.Provider>
   );
 }
