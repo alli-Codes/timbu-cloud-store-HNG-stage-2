@@ -8,20 +8,22 @@ export default function Menu() {
   const location = useLocation();
   return (
     <div
-      className={`${
-        location.pathname !== "/"
-          ? "hidden"
-          : "bg-[#FAFAFA] w-full px-8 py-5 flex justify-between fixed left-0 bottom-0 lg:hidden"
-      }`}
+      className={
+        "bg-[#FAFAFA] w-full px-8 py-5 flex justify-between fixed left-0 bottom-0 lg:hidden"
+      }
     >
       <Link to="/">
-        <StoreIcon />
+        <StoreIcon color={location.pathname == "/" ? "#C31162" : "#292D32"} />
       </Link>
       <Link to="/cart">
-        <CartIcon />
+        <CartIcon
+          color={location.pathname == "/cart" ? "#C31162" : "#292D32"}
+        />
       </Link>
       <Link to="/savedproducts">
-        <HeartIcon />
+        <HeartIcon
+          color={location.pathname == "/savedproducts" ? "#C31162" : "#292D32"}
+        />
       </Link>
     </div>
   );

@@ -13,6 +13,7 @@ import { useState } from "react";
 import bodyCreams from "./products/bodyCreams.json";
 import Cart from "./pages/Cart";
 import CheckOut from "./pages/CheckOut";
+import WishList from "./pages/WishList";
 
 export default function App() {
   const context = useAppState();
@@ -28,6 +29,7 @@ export default function App() {
             <Route path="/productinfo" element={<ProductInfo />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<CheckOut />} />
+            <Route path="/savedproducts" element={<WishList />} />
             {/* <Route path="*" element={<NoPage />} /> */}
           </Route>
         </Routes>

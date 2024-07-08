@@ -11,7 +11,7 @@ export default function Category() {
         <p className="text-[#626262]">Choose from Categories</p>
       </section>
 
-      <section className="flex justify-between items-center text-[#626262]">
+      <section className="flex flex-wrap gap-2 justify-between items-center text-[#626262]">
         <a
           href="#bodycreams"
           className={`h-8 px-2 py-1.5 flex items-center rounded-lg text-white ${
@@ -20,7 +20,7 @@ export default function Category() {
               : "bg-[#EFEFEF]"
           }`}
         >
-          Body creams
+          Lotions
         </a>
         <a
           href="#makeups"

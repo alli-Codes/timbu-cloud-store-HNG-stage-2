@@ -11,7 +11,8 @@ export default function ProductInfo() {
   const [products] = useContext(context.UserContext);
   const id = localStorage.getItem("productId");
   const product = products[id];
-  const { productImage, productName, productPrice } = product;
+  const { productImage, productName, productDescription, productPrice } =
+    product;
   const addToCart = function () {
     product.itemCounter = itemCounter;
     const prevCartItems = JSON.parse(localStorage.getItem("cartItems"));
@@ -36,19 +37,17 @@ export default function ProductInfo() {
     }
   };
   return (
-    <div className="flex flex-col ">
-      <section>
-        <img src={productImage} className="w-[25rem]" alt="" />
+    <div className="h-full flex flex-col">
+      <section className="flex justify-center">
+        <img src={productImage} className="w-[20rem]" alt="" />
       </section>
-      <section className="bg-[#F7F7F7] h-full p-8 flex flex-col  gap-10 rounded-t-3xl">
-        <div className="w-full  flex flex-col">
+      <section className="bg-[#F7F7F7] self-stretch p-8 flex flex-col  gap-10 rounded-t-3xl">
+        <div className="w-full flex flex-col gap-2">
           <h1 className="font-bold text-lg">{productName}</h1>
-          <p className="">
-            dfdjb fdbvdjbvdjvndj vdbnvjdkvdjvndj nvdjvndjvkdjvn djvdnvjdnvjdn
-          </p>
+          <p className="text-[#626262] text-sm">{productDescription}</p>
         </div>
-        <div className="flex justify-between">
-          <div className="px-4 py-2 flex items-center gap-4 border border-[#C31162] text-xl font-semibold rounded-xl">
+        <div className="flex justify-between items-center">
+          <div className="px-2 py-1 flex items-center gap-4 border border-[#C31162] text-xl font-semibold rounded-xl">
             <button onClick={decrementItems}>
               <MinusIcon />
             </button>
@@ -63,7 +62,7 @@ export default function ProductInfo() {
           <button
             onClick={addToCart}
             className={`${
-              !isDisabled ? "bg-[#C31162]" : "bg-[#777}"
+              !isDisabled ? "bg-[#C31162]" : "bg-[#a29b9e]"
             } w-full p-4 text-white text-lg font-semibold rounded-xl`}
             disabled={isDisabled}
           >

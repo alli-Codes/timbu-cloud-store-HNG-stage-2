@@ -5,7 +5,7 @@ import Menu from "../components/Menu";
 
 export default function Layout() {
   return (
-    <div className="bg-white mb-10 flex flex-col relative">
+    <div className="bg-white flex flex-col relative">
       <Header />
       <Outlet />
       <Menu />
