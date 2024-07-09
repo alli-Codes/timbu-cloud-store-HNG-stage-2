@@ -1,58 +1,60 @@
-[
-    {
-        "id": 0,
-        "productImage": "/product-images/bodycream1.png",
-        "productName": "Lotion NIVEA Soft Moisturizing Cream",
-        "productDescription": "Lotion NIVEA Soft Moisturizing Cream NIVEA Soft Moisturizing Cream Moisturizer",
-        "productPrice": "N10,000"
-    },
-    {
-        "id": 1,
-        "productImage": "/product-images/bodycream2.png",
-        "productName": "NIVEA Nourishing Body Lotion",
-        "productDescription": "NIVEA Nourishing Body Lotion NIVEA Skin Firming Hydration Body Lotion",
-        "productPrice": "N10,000"
-    },
-    {
-        "id": 2,
-        "productImage": "/product-images/bodycream7.png",
-        "productName": "Lotion NIVEA Soft Moisturizing Cream",
-        "productDescription": "Lotion NIVEA Soft Moisturizing Cream NIVEA Soft Moisturizing Cream Moisturizer",
-        "productPrice": "N10,000"
-    },
-    {
-        "id": 3,
-        "productImage": "/product-images/bodycream4.png",
-        "productName": "NIVEA Men Vitalisierende",
-        "productDescription": "NIVEA Men Vitalisierende Body Lotion",
-        "productPrice": "N10,000"
-    },
-    {
-        "id": 4,
-        "productImage": "/product-images/bodycream5.png",
-        "productName": "Lotion La Roche-Posay Lipikar Body",
-        "productDescription": "Lotion La Roche-Posay Lipikar Body Milk Skin Moisturizer La Roche-Posay Lipikar Balm AP+",
-        "productPrice": "N10,000"
-    },
-    {
-        "id": 5,
-        "productImage": "/product-images/bodycream6.png",
-        "productName": "Lotion NIVEA Soft Moisturizing Cream",
-        "productDescription": "Lotion NIVEA Soft Moisturizing Cream NIVEA Soft Moisturizing Cream Moisturizer",
-        "productPrice": "N10,000"
-    },
-    {
-        "id": 6,
-        "productImage": "/product-images/bodycream7.png",
-        "productName": "Oriflame Lotion Cosmetics Cream Facial",
-        "productDescription": "Oriflame Lotion Cosmetics Cream Facial, Attend Classclass Begins",
-        "productPrice": "N10,000"
-    },
-    {
-        "id": 7,
-        "productImage": "/product-images/bodycream8.png",
-        "productName": "Crabtree & Evelyn Body Lotion",
-        "productDescription": "Crabtree & Evelyn Body Lotion Cosmetics Crabtree & Evelyn Ultra-Moisturising Hand Therapy",
-        "productPrice": "N10,000"
-    }
-]
+{
+    "bodyCream": [
+        {
+            "id": 0,
+            "productImage": "/product-images/bodycream1.png",
+            "productName": "Lotion NIVEA Soft Moisturizing Cream",
+            "productDescription": "Lotion NIVEA Soft Moisturizing Cream NIVEA Soft Moisturizing Cream Moisturizer",
+            "productPrice": "10000"
+        },
+        {
+            "id": 1,
+            "productImage": "/product-images/bodycream2.png",
+            "productName": "NIVEA Nourishing Body Lotion",
+            "productDescription": "NIVEA Nourishing Body Lotion NIVEA Skin Firming Hydration Body Lotion",
+            "productPrice": "5000"
+        },
+        {
+            "id": 2,
+            "productImage": "/product-images/bodycream7.png",
+            "productName": "Lotion NIVEA Soft Moisturizing Cream",
+            "productDescription": "Lotion NIVEA Soft Moisturizing Cream NIVEA Soft Moisturizing Cream Moisturizer",
+            "productPrice": "12000"
+        },
+        {
+            "id": 3,
+            "productImage": "/product-images/bodycream4.png",
+            "productName": "NIVEA Men Vitalisierende",
+            "productDescription": "NIVEA Men Vitalisierende Body Lotion",
+            "productPrice": "2000"
+        },
+        {
+            "id": 4,
+            "productImage": "/product-images/bodycream5.png",
+            "productName": "Lotion La Roche-Posay Lipikar Body",
+            "productDescription": "Lotion La Roche-Posay Lipikar Body Milk Skin Moisturizer La Roche-Posay Lipikar Balm AP+",
+            "productPrice": "4000"
+        },
+        {
+            "id": 5,
+            "productImage": "/product-images/bodycream6.png",
+            "productName": "Lotion NIVEA Soft Moisturizing Cream",
+            "productDescription": "Lotion NIVEA Soft Moisturizing Cream NIVEA Soft Moisturizing Cream Moisturizer",
+            "productPrice": "10000"
+        },
+        {
+            "id": 6,
+            "productImage": "/product-images/bodycream7.png",
+            "productName": "Oriflame Lotion Cosmetics Cream Facial",
+            "productDescription": "Oriflame Lotion Cosmetics Cream Facial, Attend Classclass Begins",
+            "productPrice": "15000"
+        },
+        {
+            "id": 7,
+            "productImage": "/product-images/bodycream8.png",
+            "productName": "Crabtree & Evelyn Body Lotion",
+            "productDescription": "Crabtree & Evelyn Body Lotion Cosmetics Crabtree & Evelyn Ultra-Moisturising Hand Therapy",
+            "productPrice": "18000"
+        }
+    ]
+}

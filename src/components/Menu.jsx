@@ -9,7 +9,7 @@ export default function Menu() {
   return (
     <div
       className={
-        "bg-[#FAFAFA] w-full px-8 py-5 flex justify-between fixed left-0 bottom-0 lg:hidden"
+        "bg-[#FFFFFF] w-full px-8 py-5 flex justify-between fixed left-0 bottom-0 lg:hidden z-20"
       }
     >
       <Link to="/">

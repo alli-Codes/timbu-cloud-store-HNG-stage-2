@@ -2,36 +2,45 @@
 import AddIcon from "../icons/add-icon";
 import CloseIcon from "../icons/close-icon";
 import MinusIcon from "../icons/minus-icon";
+import useFormat2Currency from "../composable/useFormat2Currency";
 
-export default function CartItem({ product, index, handleDeletion }) {
-  const { productName, productImage, productPrice, itemCounter } = product;
+export default function CartItem({
+  product,
+  index,
+  handleDeletion,
+  deleteItem,
+}) {
+  const {
+    productName,
+    productImage,
+    productDescription,
+    productPrice,
+    itemCounter,
+  } = product;
   return (
-    <div className="p-2 flex items-center gap-2 shadow rounded-xl relative">
-      <section>
-        <img className="w-24" src={productImage} alt="" />
-      </section>
-      <section className="px-4 relative">
-        <div>
-          <h1 className="font-medium">{productName}</h1>
-          <p className="text-[#626262] text-sm">
-            jdcd dcdjnd dvjdnvdm dvd vdnkv{" "}
-          </p>
+    <div className="lg:p-10  py-10 flex items-center lg:gap-2 relative border-b border-[#959595]">
+      <img className="w-20" src={productImage} alt="" />
+      <section className="w-full flex flex-col lg:px-4">
+        <div className="lex flex-col">
+          <h1 className="max-w-[15rem] font-medium text-wrap">{productName}</h1>
         </div>
-        <div className="flex items-center justify-between">
-          <p className="text-sm font-semibold">{productPrice}</p>
-          <div className="px-4 py-1 flex items-center gap-2 border border-[#C31162] text-xl font-semibold rounded-xl">
-            <button>
+        <div className="flex items-center justify-between ">
+          <p className="text-sm text-[#959595] font-semibold">
+            {useFormat2Currency(productPrice)}
+          </p>
+          <div className="px-2 py-1 flex items-center gap-2  text-xl font-semibold rounded-xl">
+            <button className="bg-[#E0B185] p-1 rounded">
               <MinusIcon />
             </button>
-            <p className="text-lg">{itemCounter ?? 1}</p>
-            <button>
+            <p className="w-10 flex justify-center text-sm">{itemCounter}</p>
+            <button className="bg-[#E0B185] p-1 rounded">
               <AddIcon />
             </button>
           </div>
         </div>
         <div
           onClick={() => handleDeletion(index)}
-          className="absolute top-0 right-0"
+          className="p-2 absolute top-0 translate-x-4 lg:top-2 right-0 lg:translate-x-8 cursor-pointer"
         >
           <CloseIcon />
         </div>

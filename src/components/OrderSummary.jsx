@@ -1,19 +1,30 @@
-export default function OrderSummary() {
+import useFormat2Currency from "../composable/useFormat2Currency";
+
+export default function OrderSummary({ products }) {
+  // const {productPrice} = products
+
+  const productPrices = products.map((product) => product.productPrice);
+  const sum = productPrices.reduce((acc, n) => {
+    return (acc += parseInt(n));
+  }, 0);
+  const sumOfPrices = useFormat2Currency(sum);
+  const totalPrices = useFormat2Currency(sum + 1000);
+  const deliveryFee = useFormat2Currency(1000);
   return (
-    <div className="p-4 flex flex-col gap-2 font-medium shadow rounded-xl">
+    <div className="bg-white p-4 flex flex-col gap-2 font-medium rounded-xl">
       <h1>Order Summary</h1>
       <section className="pt-4 text-[#626262] border-t border-black">
         <article className="flex justify-between">
           <p>Order</p>
-          <p>N10,000</p>
+          <p>{sumOfPrices}</p>
         </article>
         <article className="flex justify-between">
           <p>Delivery Fee</p>
-          <p>N1,000</p>
+          <p>{deliveryFee}</p>
         </article>
         <article className="flex justify-between">
           <p>Total</p>
-          <p>N11,000</p>
+          <p>{totalPrices}</p>
         </article>
       </section>
     </div>

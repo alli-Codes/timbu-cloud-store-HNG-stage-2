@@ -19,9 +19,21 @@ export default function App() {
   const context = useAppState();
   const { UserContext } = context;
   const [products, setUser] = useState(bodyCreams);
+  const [cartList, setCartList] = useState([]);
+  const [wishList, setWishList] = useState([]);
   const [productId, setProductId] = useState(0);
   return (
-    <UserContext.Provider value={[products, productId, setProductId]}>
+    <UserContext.Provider
+      value={[
+        products,
+        cartList,
+        setCartList,
+        wishList,
+        setWishList,
+        productId,
+        setProductId,
+      ]}
+    >
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
