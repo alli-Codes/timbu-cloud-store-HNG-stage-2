@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import HeroArrow from "./HeroArrow";
 
 export default function HeroSection() {
   return (
@@ -6,7 +6,7 @@ export default function HeroSection() {
       <section className="  h-full hidden lg:flex justify-center">
         <img className=" bottom-0" src="/woman.png" alt="" />
       </section>
-      <section className="w-full text-white flex flex-col lg:items-start items-center text-center lg:text-left lg:justify-start justify-center gap-6">
+      <section className="w-full text-white flex flex-col lg:items-start items-center text-center lg:text-left lg:justify-start justify-center gap-6 relative">
         <h1 className="max-w-[24.5rem] text-4xl font-bold hero__text">
           Radiate Beauty and Smell Divine with{" "}
           <span className="text-[#B97938]">LuxeLook.</span>
@@ -16,11 +16,12 @@ export default function HeroSection() {
           cosmetics.
         </p>
         <button
-          onClick={() => scrollTo(0, 700)}
-          className="bg-white text-[#7D3F10] font-bold p-4 rounded-[6.25rem]"
+          onClick={() => scrollTo(0, 600)}
+          className="bg-white text-[#7D3F10] font-medium py-2 px-8 rounded-[6.25rem]"
         >
-          Start shopping now
+          Shop now
         </button>
+        <HeroArrow />
       </section>
     </div>
   );
