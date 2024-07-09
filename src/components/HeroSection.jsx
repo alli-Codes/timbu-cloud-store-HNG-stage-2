@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function HeroSection() {
   return (
     <div className="bg-[#E6C3A2] h-[80vh] px-8 flex flex-col lg:flex-row items-start lg:items-center justify-center gap-8 lg:justify-end relative rounded-xl">
@@ -13,7 +15,10 @@ export default function HeroSection() {
           We have everything you need for beauty, from creams and perfumes to
           cosmetics.
         </p>
-        <button className="bg-white text-[#7D3F10] font-bold p-4 rounded-[6.25rem]">
+        <button
+          onClick={() => scrollTo(0, 700)}
+          className="bg-white text-[#7D3F10] font-bold p-4 rounded-[6.25rem]"
+        >
           Start shopping now
         </button>
       </section>
