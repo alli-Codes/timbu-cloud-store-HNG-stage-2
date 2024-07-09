@@ -32,10 +32,10 @@ export default function Cart() {
               />
             ))}
           </div>
-          <div className="w-[30rem] mb-32 lg:mb-0 flex flex-col gap-4 ">
+          <div className="lg:w-[30rem] mb-32 lg:mb-0 flex flex-col gap-4 ">
             <OrderSummary products={storageItems} />
             <Address />
-            <div>
+            <div className="px-4">
               <Link to="/checkout">
                 <button className="w-full bg-[#C31162] p-4 text-white text-lg font-semibold rounded-xl">
                   Check Out

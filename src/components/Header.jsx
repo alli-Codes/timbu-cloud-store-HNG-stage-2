@@ -19,20 +19,22 @@ export default function Header() {
     }
   };
   return (
-    <div className="p-8 flex justify-between lg:hidden">
-      {location.pathname == "/" ? (
-        <MenuIcon />
-      ) : (
-        <Link to="/">
-          <ArrowIcon />
-        </Link>
-      )}
-      {handlePageTitle()}
-      {location.pathname == "/" || location.pathname == "/productinfo" ? (
-        <Link to="/cart">
-          <CartIcon />
-        </Link>
+    <>
+      {location.pathname != "/" ? (
+        <div className="p-8 flex justify-between lg:hidden">
+          {location.pathname == "/" ? undefined : (
+            <Link to="/">
+              <ArrowIcon />
+            </Link>
+          )}
+          {handlePageTitle()}
+          {location.pathname == "/" || location.pathname == "/productinfo" ? (
+            <Link to="/cart">
+              <CartIcon />
+            </Link>
+          ) : undefined}
+        </div>
       ) : undefined}
-    </div>
+    </>
   );
 }
