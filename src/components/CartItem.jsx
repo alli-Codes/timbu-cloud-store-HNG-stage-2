@@ -18,7 +18,7 @@ export default function CartItem({
     itemCounter,
   } = product;
   return (
-    <div className="lg:p-10  py-10 flex items-center lg:gap-2 relative border-b border-[#959595]">
+    <div className="lg:p-10  py-10 flex items-center lg:gap-2 relative border- border-[#959595]">
       <img className="w-20" src={productImage} alt="" />
       <section className="w-full flex flex-col lg:px-4">
         <div className="lex flex-col">

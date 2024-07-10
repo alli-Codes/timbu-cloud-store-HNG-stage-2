@@ -18,13 +18,10 @@ export default function HeartIcon({ id, product }) {
       onClick={() => {
         setIsLoved(!isLoved);
         setLovedColor(!isLoved ? "red" : "#6E6E6E");
-        console.log(product.isLoved);
         if (!wishList.includes(id)) {
           wishList.push(id);
-          console.log(id, wishList);
         } else {
           wishList.splice(wishList.indexOf(id), 1);
-          console.log(id, wishList);
         }
       }}
       width="19"

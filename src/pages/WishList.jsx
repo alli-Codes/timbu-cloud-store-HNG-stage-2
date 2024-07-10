@@ -7,8 +7,6 @@ export default function WishList() {
   const [products, cartList, setCartList, wishList] = useContext(
     context.UserContext
   );
-  console.log(cartList);
-  //   console.log(cartList, "Hey");
   return (
     <>
       {wishList.length != 0 ? (
