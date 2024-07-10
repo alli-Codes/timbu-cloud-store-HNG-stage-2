@@ -6,7 +6,7 @@ import Header2 from "../components/Header2";
 
 export default function Layout() {
   return (
-    <div className="flex flex-col lg:items-center relative">
+    <div className="flex flex-col mb-12 lg:items-center relative">
       <div className="lg:hidden">
         <Header />
       </div>

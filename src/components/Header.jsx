@@ -32,7 +32,7 @@ export default function Header() {
             </Link>
           )}
           {handlePageTitle()}
-          {location.pathname == "/" || location.pathname == "/productinfo" ? (
+          {location.pathname == "/" ? (
             <Link to="/cart">
               <CartIcon />
             </Link>
