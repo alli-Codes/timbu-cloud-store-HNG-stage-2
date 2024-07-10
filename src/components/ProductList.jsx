@@ -9,7 +9,7 @@ export default function ProductList() {
     context.UserContext
   );
   return (
-    <div className="w-full grid grid-cols-[repeat(auto-fit,_minmax(15rem,_1fr))] place-items-stretch gap-5">
+    <div className="w-full grid grid-cols-[repeat(auto-fit,_minmax(15rem,_1fr))] place-items-center md:place-items-stretch  gap-5">
       {products.bodyCream.map((product, index, products) => {
         product.isLoved = "#393939";
         return (
