@@ -1,7 +1,7 @@
 export default function HeroArrow() {
   return (
     <svg
-      className="absolute hidden md:flex -translate-x-48 w-32 -translate-y-32 lg:-translate-x-32 lg:-translate-y-16"
+      className="absolute hidden md:flex -translate-x-48 w-32 -translate-y-32 lg:-translate-x-20 lg:-translate-y-16"
       width="256"
       height="117"
       viewBox="0 0 256 117"

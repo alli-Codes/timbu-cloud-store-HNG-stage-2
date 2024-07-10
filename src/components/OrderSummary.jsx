@@ -11,7 +11,7 @@ export default function OrderSummary({ products }) {
   const totalPrices = useFormat2Currency(sum + 1000);
   const deliveryFee = useFormat2Currency(1000);
   return (
-    <div className="bg-white p-4 flex flex-col gap-2 font-medium rounded-xl">
+    <div className="bg-white p-4 flex flex-col gap-2 font-medium rounded">
       <h1>Order Summary</h1>
       <section className="pt-4 text-[#626262] border-t border-black">
         <article className="flex justify-between">

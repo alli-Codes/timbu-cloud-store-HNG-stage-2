@@ -4,7 +4,7 @@ import ProductList from "./ProductList";
 export default function CategoryView({ isHidden }) {
   return (
     <div>
-      <section className="flex flex-col items-center lg:items-start lg:px-8">
+      <section className="flex flex-col items-center lg:items-start text-center lg:text-left px-4 lg:px-8">
         <h1 className="font-bold text-2xl text-black">
           The Finest Selection of Products
         </h1>

@@ -1,7 +1,7 @@
 export default function Banner() {
   return (
-    <div className="py-8 px-8 flex flex-col items-center justify-center gap-2">
-      <section className="text-center">
+    <div className="mb-10 px-8 flex flex-col items-center justify-center gap-2">
+      <section className="text-center hidden">
         <h1 className="text-2xl font-bold">Brands We Carry</h1>
         <p className="text-[#959595]">
           We offer a wide range of products from top brands.

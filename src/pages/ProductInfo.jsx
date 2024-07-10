@@ -45,49 +45,51 @@ export default function ProductInfo() {
     }
   };
   return (
-    <div className="bg-white lg:m-10 flex flex-col lg:flex-row rounded-lg">
-      <section className="lg:w-[28rem] flex justify-center">
-        <img src={productImage} className="w-full object-cover" alt="" />
-      </section>
-      <section className="self-stretch p-8 lg:px-16 flex flex-col justify-center gap-10 rounded-t-3xl">
-        <div className="w-full flex flex-col gap-2">
-          <h1 className="font-bold text-[#74330B] text-lg lg:text-2xl">
-            {productName}
-          </h1>
-          <p className="text-[#626262] text-sm">{productDescription}</p>
-        </div>
-        <div className="flex justify-between items-center">
-          <p className="font-semibold">{useFormat2Currency(productPrice)}</p>
-          <div className="px-2 py-1 flex items-center gap-2  text-xl font-semibold rounded-xl">
-            <button
-              onClick={decrementItems}
-              className="bg-[#E0B185] p-1 rounded"
-            >
-              <MinusIcon />
-            </button>
-            <p className="w-10 flex justify-center text-sm">{itemCounter}</p>
-            <button
-              onClick={incrementItems}
-              className="bg-[#E0B185] p-1 rounded"
-            >
-              <AddIcon />
-            </button>
+    <div className="md:h-[80vh] px-8 flex items-center">
+      <div className="bg-white max-w-[60rem] md:p-8 lg:m-10 flex flex-col md:flex-row rounded-lg">
+        <section className="lg:max-w-[28rem] flex justify-center">
+          <img src={productImage} className="w-full object-cover" alt="" />
+        </section>
+        <section className="self-stretch p-8 lg:px-16 flex flex-col justify-center gap-10 rounded-t-3xl">
+          <div className="w-full flex flex-col gap-2">
+            <h1 className="font-bold text-[#74330B] text-lg lg:text-2xl">
+              {productName}
+            </h1>
+            <p className="text-[#626262] text-sm">{productDescription}</p>
           </div>
-        </div>
-        <div>
-          {!isAlreadyInCart ? (
-            <button
-              onClick={addToCart}
-              className={`${
-                !isDisabled ? "bg-[#E0B185]" : "bg-[#a29b9e]"
-              } w-full p-4 text-white text-lg font-semibold rounded-xl`}
-              disabled={isDisabled}
-            >
-              Add to cart
-            </button>
-          ) : undefined}
-        </div>
-      </section>
+          <div className="flex justify-between items-center">
+            <p className="font-semibold">{useFormat2Currency(productPrice)}</p>
+            <div className="px-2 py-1 flex items-center gap-2  text-xl font-semibold rounded-xl">
+              <button
+                onClick={decrementItems}
+                className="bg-[#E0B185] p-1 rounded"
+              >
+                <MinusIcon />
+              </button>
+              <p className="w-10 flex justify-center text-sm">{itemCounter}</p>
+              <button
+                onClick={incrementItems}
+                className="bg-[#E0B185] p-1 rounded"
+              >
+                <AddIcon />
+              </button>
+            </div>
+          </div>
+          <div>
+            {!isAlreadyInCart ? (
+              <button
+                onClick={addToCart}
+                className={`${
+                  !isDisabled ? "bg-[#E0B185]" : "bg-[#a29b9e]"
+                } w-full p-2 text-white text-lg  rounded`}
+                disabled={isDisabled}
+              >
+                Add to cart
+              </button>
+            ) : undefined}
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

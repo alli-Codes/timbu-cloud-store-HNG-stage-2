@@ -18,13 +18,15 @@ export default function CartItem({
     itemCounter,
   } = product;
   return (
-    <div className="lg:p-10  py-10 flex items-center lg:gap-2 relative border- border-[#959595]">
-      <img className="w-20" src={productImage} alt="" />
+    <div className="lg:py-10 py-10 flex items-center relative border- border-[#959595]">
+      <section className="w-20">
+        <img src={productImage} alt="" />
+      </section>
       <section className="w-full flex flex-col lg:px-4">
-        <div className="lex flex-col">
-          <h1 className="max-w-[15rem] font-medium text-wrap">{productName}</h1>
-        </div>
-        <div className="flex items-center justify-between ">
+        {/* <div className="lex flex-col"> */}
+        <h1 className="max-w-[15rem] font-medium text-wrap">{productName}</h1>
+        {/* </div> */}
+        <div className="flex items-center justify-betwen gap-2 ">
           <p className="text-sm text-[#959595] font-semibold">
             {useFormat2Currency(productPrice)}
           </p>
@@ -40,7 +42,7 @@ export default function CartItem({
         </div>
         <div
           onClick={() => handleDeletion(index)}
-          className="p-2 absolute top-0 translate-x-4 lg:top-2 right-0 lg:translate-x-8 cursor-pointer"
+          className="p-2 absolute top-0 translate-x-4 lg:top-2 right-0 lg:translate-x-2 cursor-pointer"
         >
           <CloseIcon />
         </div>
