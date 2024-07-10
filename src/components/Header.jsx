@@ -16,6 +16,10 @@ export default function Header() {
           Payment Method
         </h1>
       );
+    } else if (location.pathname == "/savedproducts") {
+      return (
+        <h1 className="w-full text-center text-lg font-medium">My Wishlist</h1>
+      );
     }
   };
   return (
