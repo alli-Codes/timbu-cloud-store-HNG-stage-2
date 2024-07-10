@@ -22,7 +22,7 @@ export default function Cart() {
     <div className="w-full max-w-[60rem] flex bg-reen-300 justify-center items-center ">
       {storageItems.length != 0 ? (
         <div className=" w-full lg:py-20 flex flex-col items-center md:items-start md:flex-row lg:self-center gap-8 lg:px-8 relative ">
-          <div className="max-w-[30rem] lg:w-[70rem] bg-white px-4 lg:px-10 py-10 flex flex-col">
+          <div className="w-full max-w-[30rem] lg:w-[70rem] bg-white px-4 lg:px-10 py-10 flex flex-col">
             {storageItems.map((product, index) => (
               <CartItem
                 key={index}
@@ -32,7 +32,7 @@ export default function Cart() {
               />
             ))}
           </div>
-          <div className="w-full lg:max-w-[25rem] mb-32 lg:mb-0 flex flex-col gap-4 sticky top-0">
+          <div className="w-full max-w-[30rem] lg:max-w-[25rem] mb-32 lg:mb-0 flex flex-col gap-4 sticky top-0">
             <OrderSummary products={storageItems} />
             <Address />
             <div className="px-4 lg:px-0">

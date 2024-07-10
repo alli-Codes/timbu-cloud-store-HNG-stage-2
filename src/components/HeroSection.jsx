@@ -2,7 +2,7 @@ import HeroArrow from "./HeroArrow";
 
 export default function HeroSection() {
   return (
-    <div className="bg-[#E6C3A2] h-[80v] px-8 flex flex-col lg:flex-row items-start lg:items-center justify-center gap-32 lg:justify-end relative rounded-xl">
+    <div className="bg-[#E6C3A2] h-[80vh] md:h-auto px-8 flex flex-col lg:flex-row items-start lg:items-center justify-center gap-32 lg:justify-end relative rounded-xl">
       <section className="  h-full hidden lg:flex justify-center">
         <img className="w-[48rem] bottom-0" src="/woman.png" alt="" />
       </section>

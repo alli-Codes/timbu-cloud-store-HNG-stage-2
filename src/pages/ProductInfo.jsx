@@ -45,9 +45,9 @@ export default function ProductInfo() {
     }
   };
   return (
-    <div className="md:h-[80vh] px-8 flex items-center">
-      <div className="bg-white max-w-[60rem] md:p-8 lg:m-10 flex flex-col md:flex-row rounded-lg">
-        <section className="lg:max-w-[28rem] flex justify-center">
+    <div className="md:h-[80vh] lg:px-8 flex justify-center items-center">
+      <div className="bg-white max-w-[30rem] md:max-w-[60rem] md:p-8 lg:m-10 flex flex-col items-center md:flex-row rounded-lg">
+        <section className="max-w-[28rem] md:max-w-[28rem] flex justify-center">
           <img src={productImage} className="w-full object-cover" alt="" />
         </section>
         <section className="self-stretch p-8 lg:px-16 flex flex-col justify-center gap-10 rounded-t-3xl">
