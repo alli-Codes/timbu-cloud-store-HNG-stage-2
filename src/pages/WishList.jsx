@@ -10,7 +10,7 @@ export default function WishList() {
   return (
     <>
       {wishList.length != 0 ? (
-        <div className="w-full max-w-[60rem] px-8 py-20 grid grid-cols-[repeat(auto-fill,_minmax(10rem,_1fr))]  flex-wrap md:place-items-stretch gap-5">
+        <div className="w-full max-w-[50rem] px-8 py-20 grid grid-cols-[repeat(auto-fill,_minmax(8rem,_1fr))]  flex-wrap md:place-items-stretch gap-5">
           {wishList.map((id, index) => (
             <Product
               product={products.bodyCream[id]}
