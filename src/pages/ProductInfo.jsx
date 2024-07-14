@@ -7,6 +7,7 @@ import MinusIcon from "../icons/minus-icon";
 import useFormat2Currency from "../composable/useFormat2Currency";
 // import useGetProduct from "../composable/getProduct";
 import { fetchData } from "../composable/getProduct";
+import { addToCart, removeFromCart } from "../composable/cartHandlers";
 
 export default function ProductInfo() {
   const [itemCounter, setItemCounter] = useState(1);
@@ -69,12 +70,17 @@ export default function ProductInfo() {
     return <div>Loading...</div>;
   }
 
-  const addToCart = function () {
-    product.itemCounter = itemCounter;
-    if (prevCartItems != null) {
-      prevCartItems.push(product);
-      localStorage.setItem("cartItems", JSON.stringify(prevCartItems));
-    } else localStorage.setItem("cartItems", JSON.stringify([product]));
+  // const addToCart = function () {
+  //   product.itemCounter = itemCounter;
+  //   if (prevCartItems != null) {
+  //     prevCartItems.push(product);
+  //     localStorage.setItem("cartItems", JSON.stringify(prevCartItems));
+  //   } else localStorage.setItem("cartItems", JSON.stringify([product]));
+  //   setDisable(true);
+  // };
+
+  const handleAddToCart = function (product) {
+    addToCart(product);
     setDisable(true);
   };
 
@@ -130,7 +136,7 @@ export default function ProductInfo() {
           </div>
           <div>
             <button
-              onClick={addToCart}
+              onClick={() => handleAddToCart(product)}
               className={`${
                 !isDisabled ? "bg-[#E0B185]" : "bg-[#a29b9e]"
               } w-full p-2 text-white text-lg  rounded`}
