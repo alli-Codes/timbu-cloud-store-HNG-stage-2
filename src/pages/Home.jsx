@@ -9,8 +9,10 @@ import HeroSection from "../components/HeroSection";
 import Banner from "../components/Banner";
 
 export default function Home() {
+  // const { name, description, current_price, image } = product ?? "";
+
   const context = useAppState();
-  const [products, productId] = useContext(context.UserContext);
+  // const [products, productId] = useContext(context.UserContext);
   // console.log(productId);
   const route = useLocation();
   useEffect(() => {}, [route]);
@@ -22,7 +24,6 @@ export default function Home() {
         isHidden={
           route.hash == "#bodycreams" || route.hash == "" ? "" : "hidden"
         }
-        bodyCreams={bodyCreams}
       />
     </div>
   );

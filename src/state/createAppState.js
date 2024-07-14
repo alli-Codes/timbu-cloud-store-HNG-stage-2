@@ -4,7 +4,7 @@ import bodyCreams from "../products/bodyCreams.json";
 const UserContext = createContext();
 
 export default function useAppState() {
-  const [productId, setProductId] = useState(0);
+  const [products, setProducts] = useState();
   // localStorage.setItem("productId", "1");
   // const productId = localStorage.getItem("productId");
   // setProductId(productId)
@@ -13,5 +13,5 @@ export default function useAppState() {
   //     productID.value = data;
   //   };
 
-  return { UserContext, productId, setProductId };
+  return { UserContext, products, setProducts };
 }

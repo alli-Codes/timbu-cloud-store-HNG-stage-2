@@ -1,16 +1,20 @@
 /* eslint-disable react/prop-types */
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import HeartIcon from "../icons/heart-icon";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import useAppState from "../state/createAppState";
 import useFormat2Currency from "../composable/useFormat2Currency";
 
 export default function Product({ product, index }) {
   const location = useLocation();
+
+  const navigate = useNavigate();
   const handleRouting = function () {
-    localStorage.setItem("productId", index);
+    navigate(`/${product.id}`);
+    // localStorage.setItem("productId", "00e23c010d104611a97143034fa60b76");
   };
   const isLoved = useState(false);
+  console.log(product);
 
   return (
     // <a href="/productinfo">
@@ -22,21 +26,21 @@ export default function Product({ product, index }) {
             : "bg-[#FAFAFA] p-2 absolute right-0 -translate-x-3 z-10 rounded-full cursor-pointer "
         }
       >
-        <HeartIcon id={product.id} product={product} />
+        {/* <HeartIcon id={product.id} product={product} /> */}
       </div>
-      <Link to="/productinfo">
+      <Link to={`${product.id}`}>
         <div className="flex flex-col gap-2 h-full" onClick={handleRouting}>
           <section className="h-full w-full flex items-stretch relative">
             <img
-              src={product.productImage}
+              src={`https://api.timbu.cloud/images/${product.photos[0].url}`}
               className="w-full bg-red-40 object-contain"
               alt=""
             />
           </section>
           <section>
-            <h1 className="font-medium truncate">{product.productName}</h1>
+            <h1 className="font-medium truncate">{product.name}</h1>
             <p className="text-[#626262] text-sm">
-              {useFormat2Currency(product.productPrice)}
+              {/* {useFormat2Currency(product.current_price[index].NGN[0])} */}
             </p>
           </section>
         </div>
