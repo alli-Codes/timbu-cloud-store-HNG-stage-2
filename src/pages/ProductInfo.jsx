@@ -39,23 +39,12 @@ export default function ProductInfo() {
   const [error, setError] = useState(null);
 
   const { name, description, current_price, photos } = product ?? "";
-
-  const navigate = useNavigate();
-
-  // useEffect(() => {
-  // const queryParams = new URLSearchParams({
-  //   param1: "00e23c010d104611a97143034fa60b76",
-  // });
-  // console.log(navigate.push());
-  // });
   const productId = useParams();
   useEffect(() => {
-    // navigate(`/productinfo/00e23c010d104611a97143034fa60b76`);
     const getData = async () => {
       try {
         const result = await fetchData(productId.productId);
         setProduct(result);
-        console.log(result, productId);
       } catch (error) {
         setError(error);
       } finally {
@@ -69,15 +58,6 @@ export default function ProductInfo() {
   if (loading) {
     return <div>Loading...</div>;
   }
-
-  // const addToCart = function () {
-  //   product.itemCounter = itemCounter;
-  //   if (prevCartItems != null) {
-  //     prevCartItems.push(product);
-  //     localStorage.setItem("cartItems", JSON.stringify(prevCartItems));
-  //   } else localStorage.setItem("cartItems", JSON.stringify([product]));
-  //   setDisable(true);
-  // };
 
   const handleAddToCart = function (product) {
     addToCart(product);

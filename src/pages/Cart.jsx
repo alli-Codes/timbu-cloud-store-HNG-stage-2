@@ -14,7 +14,6 @@ import {
 
 export default function Cart() {
   const [cart, setCart] = useState(checkCartInLocalStorage());
-  console.log(cart);
 
   const handleRemoveFromCart = function (id) {
     removeFromCart(id);

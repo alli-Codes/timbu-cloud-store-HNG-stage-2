@@ -3,26 +3,38 @@ import useAppState from "../state/createAppState";
 import { useLocation } from "react-router-dom";
 
 export default function HeartIcon({ id, product }) {
-  const location = useLocation();
   const context = useAppState();
-  const [products, cartList, setCartList, wishList, setWishList] = useContext(
-    context.UserContext
-  );
-  const [isLoved, setIsLoved] = useState(product.isLoved ?? false);
-  const [isLovedColor, setLovedColor] = useState("#6E6E6E");
-  wishList.includes(id)
-    ? (product.isLoved = "red")
-    : (product.isLoved = "#6E6E6E");
+  const { wishList, setWishList } = useContext(context.UserContext);
+  const list = [];
+  const addToWishList = function () {
+    const newWishList = wishList;
+    if (!list.includes(id)) {
+      list.push(id);
+      newWishList.push(product);
+      setWishList(newWishList);
+    }
+  };
+  // const location = useLocation();
+  // const context = useAppState();
+  // const [products, cartList, setCartList, wishList, setWishList] = useContext(
+  //   context.UserContext
+  // );
+  // const [isLoved, setIsLoved] = useState(product.isLoved ?? false);
+  // const [isLovedColor, setLovedColor] = useState("#6E6E6E");
+  // wishList.includes(id)
+  //   ? (product.isLoved = "red")
+  //   : (product.isLoved = "#6E6E6E");
   return (
     <svg
       onClick={() => {
-        setIsLoved(!isLoved);
-        setLovedColor(!isLoved ? "red" : "#6E6E6E");
-        if (!wishList.includes(id)) {
-          wishList.push(id);
-        } else {
-          wishList.splice(wishList.indexOf(id), 1);
-        }
+        addToWishList();
+        // setIsLoved(!isLoved);
+        // setLovedColor(!isLoved ? "red" : "#6E6E6E");
+        // if (!wishList.includes(id)) {
+        //   wishList.push(id);
+        // } else {
+        //   wishList.splice(wishList.indexOf(id), 1);
+        // }
       }}
       width="19"
       height="18"

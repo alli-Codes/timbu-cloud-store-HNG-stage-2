@@ -10,11 +10,12 @@ export default function Product({ product, index }) {
 
   const navigate = useNavigate();
   const handleRouting = function () {
-    navigate(`/${product.id}`);
+    // navigate(`/${product.id}`);
+    // console.log("hey");
     // localStorage.setItem("productId", "00e23c010d104611a97143034fa60b76");
   };
   const isLoved = useState(false);
-  console.log(product);
+  // console.log(product);
 
   return (
     // <a href="/productinfo">
@@ -26,9 +27,9 @@ export default function Product({ product, index }) {
             : "bg-[#FAFAFA] p-2 absolute right-0 -translate-x-3 z-10 rounded-full cursor-pointer "
         }
       >
-        {/* <HeartIcon id={product.id} product={product} /> */}
+        <HeartIcon id={index} product={product} />
       </div>
-      <Link to={`${product.id}`}>
+      <Link to={`/${product.id}`}>
         <div className="flex flex-col gap-2 h-full" onClick={handleRouting}>
           <section className="h-full w-full flex items-stretch relative">
             <img
