@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API_URL =
-  "api/products?organization_id=7969044c6ce14183923973947f6b847f&Appid=DM5EKOPTYGT0T8C&Apikey=80ef3d8f25974c2e9d862d383a4a993e20240712202351870290"; // Replace with your API URL
+  "api/products?organization_id=7969044c6ce14183923973947f6b847f&Appid=DM5EKOPTYGT0T8C&Apikey=80ef3d8f25974c2e9d862d383a4a993e20240712202351870290&size=10&page=1"; // Replace with your API URL
 
 export const fetchData = async () => {
   try {

@@ -28,7 +28,7 @@ export default function ProductList() {
   }
   return (
     // <div>hey</div>
-    <div className="w-full grid grid-cols-[repeat(auto-fit,_minmax(10rem,_1fr))] place-items-center md:place-items-stretch  gap-5">
+    <div className="w-full grid grid-cols-[repeat(auto-fit,_minmax(10rem,_1fr))] lg:grid-cols-5 auto-rows-min place-items-center md:place-items-stretc  gap-5">
       {products &&
         products.items?.map((product, index, products) => {
           product.isLoved = "#393939";

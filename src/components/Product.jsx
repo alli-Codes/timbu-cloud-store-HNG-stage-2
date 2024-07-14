@@ -19,7 +19,7 @@ export default function Product({ product, index }) {
 
   return (
     // <a href="/productinfo">
-    <div className="bg-[#FFFFFF] max-w-[10rem]  md:max-w-[10rem] py-4 px-8 relative rounded-[1.25rem]">
+    <div className="bg-[#FFFFFF] max-w-[10rem]  md:max-w-[10rem] py-4 px-4 relative rounded-[1.25rem]">
       <div
         className={
           location.pathname != "/"
@@ -30,11 +30,14 @@ export default function Product({ product, index }) {
         <HeartIcon id={index} product={product} />
       </div>
       <Link to={`/${product.id}`}>
-        <div className="flex flex-col gap-2 h-full" onClick={handleRouting}>
-          <section className="h-full w-full flex items-stretch relative">
+        <div
+          className="flex flex-col bg-green-40 justify-center gap-2 h-full"
+          onClick={handleRouting}
+        >
+          <section className=" h-40 flex items-stretch relative">
             <img
               src={`https://api.timbu.cloud/images/${product.photos[0].url}`}
-              className="w-full bg-red-40 object-contain"
+              className="w-full h-full bg-red-40 object-cover object-top"
               alt=""
             />
           </section>
