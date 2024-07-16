@@ -16,6 +16,7 @@ export default function ProductList() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const loaderTemplate = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
   useEffect(() => {
     const getData = async () => {
       try {
@@ -39,7 +40,7 @@ export default function ProductList() {
           return (
             <div
               key={index}
-              className="bg-[#FFFFFF] w-full max-w-[10rem]  md:max-w-[10rem] lg:max-w-full lg:h-[16rem] py-4 px-4 relative rounded-[1.25rem]"
+              className="bg-[#FFFFFF] w-full max-w-[10rem] h-[15rem]  md:max-w-[10rem] lg:max-w-full lg:h-[16rem] py-4 px-4 relative rounded-[1.25rem]"
             ></div>
           );
         })}
@@ -48,7 +49,7 @@ export default function ProductList() {
   }
   return (
     // <div>hey</div>
-    <div className="w-full grid grid-cols-[repeat(auto-fit,_minmax(15rem,_1fr))] lg:grid-cols-5 auto-rows-mi place-items-center md:place-items-stretc  gap-5">
+    <div className="w-full grid grid-cols-[repeat(auto-fit,_minmax(10rem,_1fr))] lg:grid-cols-5 auto-rows-mi place-items-center md:place-items-stretc  gap-5">
       {products &&
         products.items?.map((product, index, products) => {
           product.isLoved = "#393939";

@@ -10,7 +10,7 @@ export default function Product({ product, index }) {
 
   return (
     // <a href="/productinfo">
-    <div className="bg-[#FFFFFF] w-full max-w-[20rem]  md:max-w-[20rem] lg:max-w-full lg:h-[16rem] py-4 px-4 relative rounded-[1.25rem]">
+    <div className="bg-[#FFFFFF] w-full max-w-[15rem]  md:max-w-[20rem] lg:max-w-full lg:h-[16rem] py-4 px-4 relative rounded-[1.25rem]">
       <div
         className={
           location.pathname != "/"

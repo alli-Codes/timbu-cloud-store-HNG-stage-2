@@ -3,7 +3,13 @@ import axios from "axios";
 // Replace with your API URL
 
 export const fetchData = async (page) => {
-  const API_URL = `https://api.timbu.cloud/products?organization_id=7969044c6ce14183923973947f6b847f&Appid=DM5EKOPTYGT0T8C&Apikey=80ef3d8f25974c2e9d862d383a4a993e20240712202351870290&size=10&page=${page}`;
+  const apiBaseUrl = import.meta.env.VITE_APP_BASE_URL;
+  const apiKey = import.meta.env.VITE_APP_API_KEY;
+  const appId = import.meta.env.VITE_APP_APP_ID;
+  const orgId = import.meta.env.VITE_APP_ORGANIZATION_ID;
+
+  console.log(apiBaseUrl);
+  const API_URL = `${apiBaseUrl}/products?organization_id=${orgId}&Appid=${appId}&Apikey=${apiKey}&size=10&page=${page}`;
   try {
     const response = await axios.get(API_URL, {
       headers: {
