@@ -2,11 +2,12 @@ import useFormat2Currency from "../composable/useFormat2Currency";
 
 export default function OrderSummary({ products }) {
   // const {productPrice} = products
-
-  const productPrices = products.map((product) => product.productPrice);
+  console.log(products);
+  const productPrices = products.map((product) => product.current_price);
   const sum = productPrices.reduce((acc, n) => {
     return (acc += parseInt(n));
   }, 0);
+  console.log(productPrices);
   const sumOfPrices = useFormat2Currency(sum);
   const totalPrices = useFormat2Currency(sum + 1000);
   const deliveryFee = useFormat2Currency(1000);

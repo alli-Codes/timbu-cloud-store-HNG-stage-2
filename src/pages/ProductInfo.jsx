@@ -79,11 +79,11 @@ export default function ProductInfo() {
   };
   return (
     <div className="md:h-[80vh] lg:px-8 flex justify-center items-center">
-      <div className="bg-white max-w-[30rem] md:max-w-[60rem] md:p-8 lg:m-10 flex flex-col items-center md:flex-row rounded-lg">
-        <section className="max-w-[28rem] md:max-w-[20rem] flex justify-center">
+      <div className="bg-white max-w-[30rem] md:max-w-[60rem] md:h-full md:p-8 lg:m-10 flex flex-col items-center md:flex-row rounded-lg">
+        <section className="max-w-[28rem] h-full  md:max-w-[20rem] w-full flex justify-center items-center">
           <img
             src={`https://api.timbu.cloud/images/${photos[0].url ?? ""}`}
-            className="w-full object-cover"
+            className="w-full h-full object-contain"
             alt=""
           />
         </section>

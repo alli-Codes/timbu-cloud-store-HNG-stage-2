@@ -16,10 +16,13 @@ export default function Product({ product, index }) {
   };
   const isLoved = useState(false);
   // console.log(product);
-
+  // console.log(product, "product");
+  useEffect(() => {
+    // console.log(product.photos[0], product.name);
+  });
   return (
     // <a href="/productinfo">
-    <div className="bg-[#FFFFFF] max-w-[10rem]  md:max-w-[10rem] py-4 px-4 relative rounded-[1.25rem]">
+    <div className="bg-[#FFFFFF] w-full max-w-[10rem]  md:max-w-[10rem] lg:max-w-full lg:h-[16rem] py-4 px-4 relative rounded-[1.25rem]">
       <div
         className={
           location.pathname != "/"
@@ -37,14 +40,14 @@ export default function Product({ product, index }) {
           <section className=" h-40 flex items-stretch relative">
             <img
               src={`https://api.timbu.cloud/images/${product.photos[0].url}`}
-              className="w-full h-full bg-red-40 object-cover object-top"
+              className="w-full h-full bg-red-40 object-cover lg:object-contain object-top"
               alt=""
             />
           </section>
           <section>
             <h1 className="font-medium truncate">{product.name}</h1>
             <p className="text-[#626262] text-sm">
-              {/* {useFormat2Currency(product.current_price[index].NGN[0])} */}
+              {useFormat2Currency(product.current_price[0].NGN[0] ?? 0)}
             </p>
           </section>
         </div>
