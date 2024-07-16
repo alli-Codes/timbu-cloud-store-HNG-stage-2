@@ -3,7 +3,7 @@ import useFormat2Currency from "../composable/useFormat2Currency";
 export default function OrderSummary({ products }) {
   // const {productPrice} = products
   console.log(products);
-  const productPrices = products.map((product) => product.current_price);
+  const productPrices = products.map((product) => product.newPrice);
   const sum = productPrices.reduce((acc, n) => {
     return (acc += parseInt(n));
   }, 0);

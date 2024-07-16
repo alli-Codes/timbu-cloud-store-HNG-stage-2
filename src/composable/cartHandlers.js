@@ -7,9 +7,9 @@ const checkCartInLocalStorage = function () {
   return JSON.parse(cart);
 };
 
-const addToCart = function (newItem) {
+const addToCart = function (newItem, newPrice) {
   const cart = checkCartInLocalStorage();
-  cart.push(newItem);
+  cart.push({ newItem, newPrice });
   localStorage.setItem("cart", JSON.stringify(cart));
 };
 

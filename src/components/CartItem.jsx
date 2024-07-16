@@ -6,7 +6,12 @@ import useFormat2Currency from "../composable/useFormat2Currency";
 import { removeFromCart } from "../composable/cartHandlers";
 import { useState } from "react";
 
-export default function CartItem({ product, index, handleRemoveFromCart }) {
+export default function CartItem({
+  product,
+  index,
+  price,
+  handleRemoveFromCart,
+}) {
   const { name, photos, current_price } = product;
   const [itemCounter] = useState(0);
 
@@ -24,9 +29,9 @@ export default function CartItem({ product, index, handleRemoveFromCart }) {
         {/* </div> */}
         <div className="flex items-center justify-betwen gap-2 ">
           <p className="text-sm text-[#959595] font-semibold">
-            {useFormat2Currency(current_price)}
+            {useFormat2Currency(price)}
           </p>
-          <div className="px-2 py-1 flex items-center gap-2  text-xl font-semibold rounded-xl">
+          {/* <div className="px-2 py-1 flex items-center gap-2  text-xl font-semibold rounded-xl">
             <button className="bg-[#E0B185] p-1 rounded">
               <MinusIcon />
             </button>
@@ -34,7 +39,7 @@ export default function CartItem({ product, index, handleRemoveFromCart }) {
             <button className="bg-[#E0B185] p-1 rounded">
               <AddIcon />
             </button>
-          </div>
+          </div> */}
         </div>
         <div
           onClick={() => handleRemoveFromCart(index)}

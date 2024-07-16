@@ -26,6 +26,7 @@ export default function App() {
   const [productId, setProductId] = useState(0);
   const [page, setPage] = useState(1);
   const [wishIndex, setWishIndex] = useState([]);
+  const [newItemPrice, setNewItemPrice] = useState(0);
   return (
     <UserContext.Provider
       value={{
@@ -41,6 +42,8 @@ export default function App() {
         setProductId,
         page,
         setPage,
+        newItemPrice,
+        setNewItemPrice,
       }}
     >
       <BrowserRouter>

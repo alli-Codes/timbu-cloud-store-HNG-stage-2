@@ -14,6 +14,8 @@ import {
 
 export default function Cart() {
   const [cart, setCart] = useState(checkCartInLocalStorage());
+  // const {newItem, newPrice} = cart
+  console.log(cart);
 
   const handleRemoveFromCart = function (id) {
     removeFromCart(id);
@@ -26,9 +28,11 @@ export default function Cart() {
         <div className=" w-full lg:py-20 flex flex-col items-center md:items-start md:flex-row lg:self-center gap-8 lg:px-8 relative ">
           <div className="w-full max-w-[30rem] lg:w-[70rem] bg-white px-4 lg:px-10 py-10 flex flex-col">
             {cart.map((product, index) => (
+              // console.log(product)
               <CartItem
                 key={index}
-                product={product}
+                product={product.newItem}
+                price={product.newPrice}
                 index={index}
                 handleRemoveFromCart={handleRemoveFromCart}
               />

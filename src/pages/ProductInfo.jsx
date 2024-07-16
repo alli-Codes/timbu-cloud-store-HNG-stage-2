@@ -8,12 +8,13 @@ import useFormat2Currency from "../composable/useFormat2Currency";
 // import useGetProduct from "../composable/getProduct";
 import { fetchData } from "../composable/getProduct";
 import { addToCart, removeFromCart } from "../composable/cartHandlers";
+import VaryCartItem from "../components/VaryCartItem";
 
 export default function ProductInfo() {
   const [itemCounter, setItemCounter] = useState(1);
   const [isDisabled, setDisable] = useState(false);
   const context = useAppState();
-  // const [products] = useContext(context.UserContext);
+  const { newItemPrice, setNewItemPrice } = useContext(context.UserContext);
   const id = localStorage.getItem("productId");
   // const product = useGetProduct(id);
   // console.log(product);
@@ -40,7 +41,6 @@ export default function ProductInfo() {
 
   const { name, description, current_price, photos } = product ?? "";
   const productId = useParams();
-  console.log(productId);
 
   useEffect(() => {
     const getData = async () => {
@@ -62,7 +62,7 @@ export default function ProductInfo() {
   }
 
   const handleAddToCart = function (product) {
-    addToCart(product);
+    addToCart(product, newItemPrice != 0 ? newItemPrice : current_price);
     setDisable(true);
   };
 
@@ -96,25 +96,11 @@ export default function ProductInfo() {
             </h1>
             <p className="text-[#626262] text-sm">{description}</p>
           </div>
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between">
             <p className="font-semibold">
               {useFormat2Currency(current_price ?? 0)}
             </p>
-            <div className="px-2 py-1 flex items-center gap-2  text-xl font-semibold rounded-xl">
-              <button
-                onClick={decrementItems}
-                className="bg-[#E0B185] p-1 rounded"
-              >
-                <MinusIcon />
-              </button>
-              <p className="w-10 flex justify-center text-sm">{itemCounter}</p>
-              <button
-                onClick={incrementItems}
-                className="bg-[#E0B185] p-1 rounded"
-              >
-                <AddIcon />
-              </button>
-            </div>
+            <VaryCartItem itemPrice={current_price} />
           </div>
           <div>
             <button
