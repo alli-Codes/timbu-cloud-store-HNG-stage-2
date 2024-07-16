@@ -22,6 +22,7 @@ export default function App() {
   const [cartList, setCartList] = useState([]);
   const [wishList, setWishList] = useState([]);
   const [productId, setProductId] = useState(0);
+  const [page, setPage] = useState(1);
 
   return (
     <UserContext.Provider
@@ -33,6 +34,8 @@ export default function App() {
         setWishList,
         productId,
         setProductId,
+        page,
+        setPage,
       }}
     >
       <BrowserRouter>

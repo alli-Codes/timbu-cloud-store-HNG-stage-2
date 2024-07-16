@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
 import Product from "./Product";
 import useAppState from "../state/createAppState";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { fetchData } from ".././composable/getProducts";
 
 export default function ProductList() {
+  const context = useAppState();
+  const { page, setPage } = useContext(context.UserContext);
   const [products, setProducts] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -12,7 +14,7 @@ export default function ProductList() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const result = await fetchData();
+        const result = await fetchData(page);
         setProducts(result);
       } catch (error) {
         setError(error);
@@ -22,7 +24,7 @@ export default function ProductList() {
     };
 
     getData();
-  }, []);
+  }, [page]);
   if (loading) {
     return (
       <div className="w-full grid grid-cols-[repeat(auto-fit,_minmax(10rem,_1fr))] lg:grid-cols-5 auto-rows-mi place-items-center md:place-items-stretc  gap-5">

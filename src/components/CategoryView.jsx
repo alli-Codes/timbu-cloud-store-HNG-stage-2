@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import Pagination from "./Pagination";
 import ProductList from "./ProductList";
 // import useGetProducts from ".././composable/getProducts";
 
@@ -19,6 +20,7 @@ export default function CategoryView({ isHidden }) {
           All
         </h1> */}
         <ProductList />
+        <Pagination />
       </div>
     </div>
   );
