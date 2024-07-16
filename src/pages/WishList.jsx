@@ -4,15 +4,21 @@ import useAppState from "../state/createAppState";
 
 export default function WishList() {
   const context = useAppState();
-  const { wishList, setWishList } = useContext(context.UserContext);
+  const { wishIndex, products } = useContext(context.UserContext);
   return (
-    <div className="w-full max-w-[50rem] px-8 py-20 flex flex-col gap-4">
-      <h1>Items in your wishlist.</h1>
-      {wishList.length != 0 ? (
-        <div className="w-full  grid grid-cols-[repeat(auto-fill,_minmax(8rem,_1fr))]  flex-wrap md:place-items-stretch gap-5">
-          {wishList.map((product, index) => (
-            <Product product={product} index={index} key={index} />
-          ))}
+    <div className="w-full lg:max-w-[80rem] px-8 py-20 ">
+      {wishIndex.length != 0 ? (
+        <div className="flex flex-col gap-4">
+          <h1>Items in your wishlist.</h1>
+          <div className="w-full grid grid-cols-[repeat(auto-fit,_minmax(10rem,_1fr))] lg:grid-cols-5 auto-rows-mi place-items-center md:place-items-stretc  gap-5">
+            {wishIndex.map((item, index) => (
+              <Product
+                product={products.items[item]}
+                index={index}
+                key={index}
+              />
+            ))}
+          </div>
         </div>
       ) : (
         <div className="self-center">

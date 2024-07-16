@@ -3,7 +3,7 @@ import Pagination from "./Pagination";
 import ProductList from "./ProductList";
 // import useGetProducts from ".././composable/getProducts";
 
-export default function CategoryView({ isHidden }) {
+export default function CategoryView() {
   // const products = useGetProducts();
   // console.log(products, "from view");
 
@@ -15,10 +15,7 @@ export default function CategoryView({ isHidden }) {
         </h1>
         <p className=" text-[#6E6E6E]">Shop Premium and Branded Products</p>
       </section>
-      <div className={isHidden + " flex flex-col p-8 gap-4"}>
-        {/* <h1 className="font-bold text-xl text-[#6E6E6E] text-center md:text-left">
-          All
-        </h1> */}
+      <div className={"flex flex-col p-8 gap-4"}>
         <ProductList />
         <Pagination />
       </div>

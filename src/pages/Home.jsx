@@ -20,11 +20,7 @@ export default function Home() {
     <div className="lg:max-w-[80rem] flex flex-col gap-10 ">
       <HeroSection />
       <Banner />
-      <CategoryView
-        isHidden={
-          route.hash == "#bodycreams" || route.hash == "" ? "" : "hidden"
-        }
-      />
+      <CategoryView />
     </div>
   );
 }

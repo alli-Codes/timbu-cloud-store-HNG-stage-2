@@ -3,11 +3,16 @@ import Product from "./Product";
 import useAppState from "../state/createAppState";
 import { useContext, useEffect, useState } from "react";
 import { fetchData } from ".././composable/getProducts";
+import { useParams } from "react-router-dom";
 
 export default function ProductList() {
   const context = useAppState();
-  const { page, setPage } = useContext(context.UserContext);
-  const [products, setProducts] = useState();
+  const { page, setPage, products, setProducts } = useContext(
+    context.UserContext
+  );
+  const pageNumber = useParams();
+  // console.log();
+  // const [] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const loaderTemplate = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -16,11 +21,13 @@ export default function ProductList() {
       try {
         const result = await fetchData(page);
         setProducts(result);
+        console.log(result);
       } catch (error) {
         setError(error);
       } finally {
         setLoading(false);
       }
+      // setPage(pageNumber.page ?? 1);
     };
 
     getData();
@@ -41,7 +48,7 @@ export default function ProductList() {
   }
   return (
     // <div>hey</div>
-    <div className="w-full grid grid-cols-[repeat(auto-fit,_minmax(10rem,_1fr))] lg:grid-cols-5 auto-rows-mi place-items-center md:place-items-stretc  gap-5">
+    <div className="w-full grid grid-cols-[repeat(auto-fit,_minmax(15rem,_1fr))] lg:grid-cols-5 auto-rows-mi place-items-center md:place-items-stretc  gap-5">
       {products &&
         products.items?.map((product, index, products) => {
           product.isLoved = "#393939";

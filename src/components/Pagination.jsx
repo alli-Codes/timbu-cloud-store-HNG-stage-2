@@ -19,7 +19,7 @@ export default function Pagination() {
         2
       </button>
       <button
-        onClick={() => setPage(1)}
+        onClick={() => setPage(3)}
         className="p-4 w-1 h-1 flex items-center justify-center border border-2 rounded"
       >
         3
